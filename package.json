@@ -1,0 +1,29 @@
+{
+  "name": "level-scuttlebutt-test",
+  "description": "Testing level scuttlebutt",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/juliangruber/level-scuttlebutt-test.git"
+  },
+  "homepage": "https://github.com/juliangruber/level-scuttlebutt-test",
+  "main": "index.js",
+  "dependencies": {
+    "level": "*",
+    "level-scuttlebutt": "*",
+    "level-sublevel": "*",
+    "rimraf": "~2.2.2",
+    "crdt": "~3.5.4"
+  },
+  "keywords": [
+    "level",
+    "replication",
+    "test"
+  ],
+  "author": {
+    "name": "Julian Gruber",
+    "email": "mail@juliangruber.com",
+    "url": "http://juliangruber.com"
+  },
+  "license": "MIT"
+}
