@@ -15,6 +15,7 @@ var delay = 2000;
   var ps = spawn('node', [__dirname + '/index', i]);
   var ch = String.fromCharCode(64 + i);
   ps.stdout.on('data', log(' ' + ch));
+  ps.stderr.pipe(process.stderr);
   processes.push(ps);
   if (i < parties) setTimeout(next.bind(null, i + 1), delay);
   else write();

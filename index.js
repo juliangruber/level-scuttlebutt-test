@@ -32,12 +32,16 @@ scDb.open('doc', function(err, doc) {
   });
 
   net.createServer(function(con) {
-    con.pipe(doc.createStream()).pipe(con);
+    con
+    .pipe(scDb.createReplicateStream({ tail: true }))
+    .pipe(con);
   }).listen(8000 + id);
 
   var con = net.connect(8000 + id - 1);
-  con.on('error', noop);
-  con.pipe(doc.createStream()).pipe(con);
+  con
+  .on('error', noop)
+  .pipe(scDb.createReplicateStream({ tail: true }))
+  .pipe(con);
 });
 
 
