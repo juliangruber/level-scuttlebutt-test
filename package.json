@@ -12,8 +12,8 @@
     "level": "*",
     "level-scuttlebutt": "*",
     "level-sublevel": "*",
-    "rimraf": "~2.2.2",
-    "crdt": "~3.5.4"
+    "rimraf": "~2.5.4",
+    "crdt": "~3.6.4"
   },
   "keywords": [
     "level",
